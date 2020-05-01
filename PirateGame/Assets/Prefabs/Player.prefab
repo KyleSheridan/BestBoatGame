@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6696101370825156554}
   - component: {fileID: 6696101370825156553}
   - component: {fileID: 6696101370825156555}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696101370990746139}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FirstPerson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6696101371070292087}
   - component: {fileID: 6696101371070292086}
   - component: {fileID: 6696101371070292081}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696101371099632392}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdPerson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696101371237132658}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 6696101371962937468}
   - component: {fileID: 6696101371962937469}
   - component: {fileID: 6696101371962937470}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6696101372037740367}
   - component: {fileID: 6696101372037740366}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MinimapCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 6696101372189002629}
   - component: {fileID: 6696101372189002628}
   - component: {fileID: 6696101372189002619}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

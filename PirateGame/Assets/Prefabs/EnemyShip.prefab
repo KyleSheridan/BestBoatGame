@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8291480621747026174}
   - component: {fileID: 7795697532369046130}
   - component: {fileID: 3314873877147502804}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyShip
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   player: {fileID: 0}
   spawnPoint: {fileID: 5191394942054479034}
-  bulletPrefab: {fileID: 4243944096123484629, guid: ceb33cde20afab1419186ae0827c06a8,
+  bulletPrefab: {fileID: 6464935582948401524, guid: f6292de4866dfcc419e9eebc577b3e1e,
     type: 3}
   speed: 500
   maxSpeed: 7
@@ -183,7 +183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5191394942054479034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

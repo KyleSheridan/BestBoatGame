@@ -36,5 +36,12 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerStats.stats.TakeDamage(damage);
+
+            Destroy(gameObject);
+        }
     }
 }

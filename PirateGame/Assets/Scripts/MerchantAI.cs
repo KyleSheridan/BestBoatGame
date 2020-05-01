@@ -42,7 +42,7 @@ public class MerchantAI : MonoBehaviour
         Vector3 direction;      //direction to move towards
         Vector3 angle;          //direction to face
 
-        if (withinRange && rb.velocity.magnitude <= maxSpeed && !pirate)
+        if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) && !pirate)
         {
             //if merchant
 
@@ -54,7 +54,7 @@ public class MerchantAI : MonoBehaviour
 
             transform.rotation = Quaternion.LookRotation(angle);        //face that direction
         }
-        else if (withinRange && rb.velocity.magnitude <= maxSpeed && pirate)
+        else if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) && pirate)
         {
             //if pirate
 
@@ -76,13 +76,13 @@ public class MerchantAI : MonoBehaviour
             
             if(angle.y <= direction.y + shootRot && angle.y >= direction.y - shootRot && canShoot)
             {
-                StartCoroutine(ShootRate(1 / (es.stats.FireRate * 0.25f)));
+                StartCoroutine(ShootRate(1 / (es.stats.FireRate * 0.1f)));
 
                 GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);       //spawn bullet
 
                 Bullet bul = bullet.GetComponent<Bullet>();         //get bullet script
 
-                bul.damage = es.stats.DamageStat * 50;     //set bullet damage = enemy damage
+                bul.damage = es.stats.DamageStat * 20;     //set bullet damage = enemy damage
             }
 
             transform.rotation = Quaternion.LookRotation(angle);        //face that direction

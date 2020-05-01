@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6225508713554125299}
   - component: {fileID: -6479168153954733560}
   - component: {fileID: 8743157630820786427}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MerchantShip
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -127,12 +127,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   player: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
   speed: 500
   maxSpeed: 7
   rotSpeed: 0
   closeDist: 80
   farDist: 120
+  shootRot: 0
   pirate: 0
+  es: {fileID: 0}
 --- !u!114 &-6479168153954733560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +152,7 @@ MonoBehaviour:
   maxRandSpeed: 0
   maxRandHealth: 0
   maxRandDamage: 0
+  maxRandFireRate: 0
   maxDrops: 5
 --- !u!114 &8743157630820786427
 MonoBehaviour:
