@@ -30,11 +30,11 @@ public class Movement : MonoBehaviour
         forward = Input.GetAxis("Vertical");
         turning = Input.GetAxis("Horizontal");
 
-        if(forward > 0 && rb.velocity.magnitude <= maxSpeed)
+        if(forward > 0 && rb.velocity.magnitude <= maxSpeed * Storm.stormSpeed)
         {
             rb.AddForce(transform.forward * moveSpeed * PlayerStats.stats.SpeedStat * Time.deltaTime);        //add force forward
         }
-        else if(forward < 0 && rb.velocity.magnitude <= maxBackSpeed)
+        else if(forward < 0 && rb.velocity.magnitude <= maxBackSpeed * Storm.stormSpeed)
         {
             rb.AddForce(-transform.forward * moveSpeed * PlayerStats.stats.SpeedStat * Time.deltaTime);       //add force backwards
         }

@@ -42,7 +42,7 @@ public class MerchantAI : MonoBehaviour
         Vector3 direction;      //direction to move towards
         Vector3 angle;          //direction to face
 
-        if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) && !pirate)
+        if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) * Storm.stormSpeed && !pirate)
         {
             //if merchant
 
@@ -54,7 +54,7 @@ public class MerchantAI : MonoBehaviour
 
             transform.rotation = Quaternion.LookRotation(angle);        //face that direction
         }
-        else if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) && pirate)
+        else if (withinRange && rb.velocity.magnitude <= maxSpeed * (0.5f * es.stats.SpeedStat) * Storm.stormSpeed && pirate)
         {
             //if pirate
 
