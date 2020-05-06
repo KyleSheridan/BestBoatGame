@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - Bullet
   - Enemy
+  - Spawn
   layers:
   - Default
   - TransparentFX
