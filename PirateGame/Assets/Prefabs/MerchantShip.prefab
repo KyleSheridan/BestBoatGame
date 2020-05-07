@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6225508713554125299}
   - component: {fileID: -6479168153954733560}
   - component: {fileID: 8743157630820786427}
+  - component: {fileID: 794113317847384917}
   m_Layer: 11
   m_Name: MerchantShip
   m_TagString: Enemy
@@ -129,14 +130,16 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnPoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
-  speed: 500
-  maxSpeed: 7
+  speed: 200
+  maxSpeed: 3
   rotSpeed: 0
   closeDist: 80
   farDist: 120
   shootRot: 0
   pirate: 0
   es: {fileID: 0}
+  withinRange: 0
+  shootable: 0
 --- !u!114 &-6479168153954733560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,4 +174,18 @@ MonoBehaviour:
   - {fileID: 438366101963179522, guid: 2e1087c2a5edb064cbf0d9bf598f5466, type: 3}
   - {fileID: 1646715996567721001, guid: 21ea2bad4c4d7a846bee3a6cf138738c, type: 3}
   - {fileID: 1127117175765823232, guid: 0162699e384a3ff42825ebb29c6473fa, type: 3}
+  - {fileID: 8173644052136575132, guid: a70bbe485d5da4245b0ee69a044b1f52, type: 3}
   dropDist: 10
+--- !u!114 &794113317847384917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685445167281411156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3646eb5d3221f4388eb504c7c04fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []

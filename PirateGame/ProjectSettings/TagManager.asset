@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Enemy
   - Spawn
+  - Target
   layers:
   - Default
   - TransparentFX

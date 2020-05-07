@@ -22,10 +22,10 @@ public class MerchantAI : MonoBehaviour
 
     public EnemeyStats es;          //EnemyStats Compontent of ship
 
-    private bool withinRange = false;   //bool to check if within range
+    public bool withinRange = false;   //bool to check if within range
 
     private bool canShoot = true;       //stop bullets spawning every frame
-    private bool shootable = false;     //for rotating and shooting at player
+    public bool shootable = false;     //for rotating and shooting at player
 
     // Start is called before the first frame update
     void Start()
@@ -118,7 +118,7 @@ public class MerchantAI : MonoBehaviour
     }
 
     //find direction betwwen two points
-    private Vector3 FindDirection(Vector3 vect1, Vector3 vect2)
+    public Vector3 FindDirection(Vector3 vect1, Vector3 vect2)
     {
         Vector3 displacement = vect1 - vect2;       //find direction with dist
 

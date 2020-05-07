@@ -19,6 +19,13 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);        //move forward at move speed
     }
 
+    IEnumerator Lifetime()
+    {
+        yield return new WaitForSeconds(10);
+
+        Destroy(gameObject);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
