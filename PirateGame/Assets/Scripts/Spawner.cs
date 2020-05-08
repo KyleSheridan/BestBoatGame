@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     public GameObject pirate;
     public GameObject merchant;
 
-    private GameObject[] spawnPoints;
+    public GameObject[] spawnPoints;
 
     private bool spawnable = true;
 
@@ -32,16 +32,18 @@ public class Spawner : MonoBehaviour
 
             int randShip = Random.Range(0, 2);
 
-            if(randShip == 0)
+            bool canSpawn = spawnPoints[randNum].gameObject.GetComponent<SpawnActive>().spawnable;
+
+            if(randShip == 0 && canSpawn)
             {
                 Instantiate(merchant, spawnPoints[randNum].transform.position, spawnPoints[randNum].transform.rotation);
+                StartCoroutine(SpawnWait(5));
             }
-            else
+            else if(randShip == 1 && canSpawn)
             {
                 Instantiate(pirate, spawnPoints[randNum].transform.position, spawnPoints[randNum].transform.rotation);
+                StartCoroutine(SpawnWait(5));
             }
-
-            StartCoroutine(SpawnWait(5));
         }
     }
 

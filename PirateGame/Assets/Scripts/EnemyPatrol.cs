@@ -23,12 +23,12 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, target) < 1)
+        if(Vector3.Distance(transform.position, target) < 10)
         {
             target = FindTarget();
         }
 
-        if(!mAI.shootable && !mAI.withinRange)
+        if(!mAI.shootable && !mAI.withinRange && mAI.rb.velocity.magnitude <= mAI.maxSpeed * (0.5f * mAI.es.stats.SpeedStat) * Storm.stormSpeed)
         {
             //find direction towards target 
             Vector3 direction = mAI.FindDirection(target, transform.position);
