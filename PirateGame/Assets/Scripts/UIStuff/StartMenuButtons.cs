@@ -10,6 +10,11 @@ public class StartMenuButtons : MonoBehaviour
         SceneManager.LoadScene("MainGame");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

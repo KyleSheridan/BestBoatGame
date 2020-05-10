@@ -35,12 +35,16 @@ public class Storm : MonoBehaviour
         rain.SetActive(true);
         storm.SetActive(true);
 
+        RenderSettings.fogDensity = 0.01f;
+
         stormSpeed = 0.75f;
 
         yield return new WaitForSeconds(60);
 
         rain.SetActive(false);
         storm.SetActive(false);
+
+        RenderSettings.fogDensity = 0.002f;
 
         stormSpeed = 1f;
     }
