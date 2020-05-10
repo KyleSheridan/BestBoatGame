@@ -7,7 +7,7 @@ public class EnemeyStats : BoatStats
     public Boat stats;      //struct with stats
     public int maxDrops;    //max amount of items to drop
 
-    private EnemyDrops ed;
+    private EnemyDrops ed;      //EnemyDrops component
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +23,15 @@ public class EnemeyStats : BoatStats
         //if bool destroyed in stats struct is true spawn drops, destroy boat
         if (stats.Destroyed)
         {
-            int numDrops = Random.Range(0, maxDrops);
+            int numDrops = Random.Range(0, maxDrops);       //random number of drops
 
+            //spawn drops
             for (int i = 0; i < numDrops; i++)
             {
                 ed.Spawn();
             }
 
+            //destroy boat
             Destroy(gameObject);
         }
     }

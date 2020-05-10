@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public int maxShips;
+    public int maxShips;                //max enemys in scene
 
-    public GameObject pirate;
-    public GameObject merchant;
+    public GameObject pirate;           //pirate prefab
+    public GameObject merchant;         //merchant prefab
 
-    public GameObject[] spawnPoints;
+    public GameObject[] spawnPoints;    //spawn points in array
 
-    private bool spawnable = true;
+    private bool spawnable = true;      //dont spawn every frame
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +22,21 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int shipCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        int shipCount = GameObject.FindGameObjectsWithTag("Enemy").Length;      //find amount of ships in scene
 
-        spawnPoints = GameObject.FindGameObjectsWithTag("Spawn");
+        spawnPoints = GameObject.FindGameObjectsWithTag("Spawn");               //find spawn points
 
+        //if can spawn a ship
         if(shipCount < maxShips && spawnable)
         {
-            int randNum = Random.Range(0, spawnPoints.Length);
+            int randNum = Random.Range(0, spawnPoints.Length);          //find random index for spawnPoints
 
             int randShip = Random.Range(0, 2);
 
+            //if boat too close to spawn point = false
             bool canSpawn = spawnPoints[randNum].gameObject.GetComponent<SpawnActive>().spawnable;
 
+            //spawn boat and wait 5 seconds
             if(randShip == 0 && canSpawn)
             {
                 Instantiate(merchant, spawnPoints[randNum].transform.position, spawnPoints[randNum].transform.rotation);
@@ -47,6 +50,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    //wait between spawns
     IEnumerator SpawnWait(float waitTime)
     {
         spawnable = false;

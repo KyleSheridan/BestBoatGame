@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnActive : MonoBehaviour
 {
-    public bool spawnable = true;
+    public bool spawnable = true;       //turn spawn point on or off
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,12 @@ public class SpawnActive : MonoBehaviour
     {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy")
         {
-            spawnable = false;
+            spawnable = false;          //if enemy too close to spawn point turn turn spawn point off
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        spawnable = true;
+        spawnable = true;               //if player too clost to spwan point turn spawn point off
     }
 }

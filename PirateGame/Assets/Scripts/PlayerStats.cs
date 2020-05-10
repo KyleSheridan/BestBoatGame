@@ -15,36 +15,7 @@ public class PlayerStats : BoatStats
     // Update is called once per frame
     void Update()
     {
-        //Preferably get rid of this (Its Debug stuff if you're marking my commenting)
-        //  |
-        //  |
-        //  V
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Debug.Log("Speed: " + stats.SpeedStat + " Health: " + stats.MaxHealthStat + " Damage: " + stats.DamageStat);
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            stats.SpeedUp(1);
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            stats.HealthUp(1);
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            stats.DamageUp(1);
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log("Current health is: " + stats.Health);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Debug.Log(PlayerStats.stats.Health / (PlayerStats.stats.MaxHealthStat * 100));
-        }
-        //_________________
+        
     }
 
     //GenerateStats function changed to give player min stats of 5 (see BoatStats script for original function)

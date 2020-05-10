@@ -90,6 +90,7 @@ public class BoatStats : MonoBehaviour
         //constructor for boat struct
         public Boat(float speed, float health, float damage, float fireRate)
         {
+            //set properties
             speed_ = speed;
             maxHealth_ = health;
             damage_ = damage;
@@ -97,6 +98,7 @@ public class BoatStats : MonoBehaviour
             health_ = health * 100f;        //max health = health stat * 100
             destroyed_ = false;
 
+            //find max stat
             maxStat_ = speed;
             if(health > maxStat_)
             {
@@ -111,20 +113,6 @@ public class BoatStats : MonoBehaviour
                 maxStat_ = fireRate;
             }
         }
-    }
-
-    public float FindMax(List<float> li)
-    {
-        float max = 0;
-        for (int i = 0; i < li.Count; i++)
-        {
-            if(li[i] > max)
-            {
-                max = li[i];
-            } 
-        }
-
-        return max;
     }
 
     //make boat with randomly generated stats 

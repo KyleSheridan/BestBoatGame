@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);        //move forward at move speed
     }
 
+    //destroy bullet after 10 seconds
     IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(10);
@@ -46,6 +47,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            //if bullet colides with player damage player
             PlayerStats.stats.TakeDamage(damage);
 
             Destroy(gameObject);

@@ -127,6 +127,7 @@ public class MerchantAI : MonoBehaviour
         return new Vector3(direct.x, 0, direct.z);      //return direction
     }
 
+    //stop enemy shooting every frame
     IEnumerator ShootRate(float waitTime)
     {
         canShoot = false;

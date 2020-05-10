@@ -134,7 +134,7 @@ MonoBehaviour:
   maxSpeed: 3
   rotSpeed: 0
   closeDist: 80
-  farDist: 120
+  farDist: 300
   shootRot: 0
   pirate: 0
   es: {fileID: 0}
